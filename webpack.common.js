@@ -2,7 +2,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-	mode: "development",
 	devtool: "eval-source-map",
 	entry: "./src/index.ts",
 	plugins: [
@@ -25,10 +24,5 @@ module.exports = {
 	},
 	resolve: {
 		extensions: [".ts", ".js"],
-	},
-	output: {
-		publicPath: "public",
-		filename: "bundle.[contentHash].js",
-		path: path.resolve(__dirname, "public"),
 	},
 };
