@@ -1,9 +1,15 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
 	mode: "development",
 	devtool: "eval-source-map",
 	entry: "./src/index.ts",
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: "./src/template.html",
+		}),
+	],
 	module: {
 		rules: [
 			{
