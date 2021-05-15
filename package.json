@@ -6,13 +6,15 @@
 	"scripts": {
 		"serve": "webpack-dev-server --config webpack.dev.js --open",
 		"build": "webpack --config webpack.dev.js",
-		"build-prod": "webpack --config webpack.dev.js",
+		"build-prod": "webpack --config webpack.prod.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "Edvinas Aukstakalnis",
 	"license": "MIT",
 	"devDependencies": {
 		"css-loader": "^5.2.4",
+		"file-loader": "^3.0.1",
+		"html-loader": "^0.5.5",
 		"html-webpack-plugin": "^4.3.0",
 		"node-sass": "^4.14.1",
 		"sass-loader": "^8.0.1",
@@ -23,5 +25,8 @@
 		"webpack-cli": "^3.3.11",
 		"webpack-dev-server": "^3.10.3",
 		"webpack-merge": "^4.2.1"
+	},
+	"dependencies": {
+		"clean-webpack-plugin": "*"
 	}
 }
