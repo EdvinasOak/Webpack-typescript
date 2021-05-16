@@ -1,24 +1,17 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
 	devtool: "eval-source-map",
-	entry: "./src/index.ts",
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: "./src/template.html",
-		}),
-	],
+	entry: {
+		main: "./src/index.ts",
+		vendor: "./src/vendor.js",
+	},
 	module: {
 		rules: [
 			{
 				test: /\.ts$/,
 				include: [path.resolve(__dirname, "src")],
 				use: "ts-loader",
-			},
-			{
-				test: /\.scss$/,
-				use: ["style-loader", "css-loader", "sass-loader"],
 			},
 			{
 				test: /\.html$/,
