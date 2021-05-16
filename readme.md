@@ -1,6 +1,6 @@
 # Webpack - TS Boilerplate
 
-Webpack - TS Boilerplate is meant to be a reusable starting for your projects.
+Webpack - TS Boilerplate is meant to be a reusable starting point for your projects.
 
 ## Features
 
